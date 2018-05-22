@@ -17,16 +17,22 @@ const Axios = require('axios');
 const reddit  = Axios.create({baseURL: 'https://gateway.reddit.com/desktopapi/v1/subreddits'});
 reddit.get('/litecoin?rtj=debug&redditWebClient=web2x&app=web2x-client-production&allow_over18=&dist=9&layout=classic&sort=hot').then( data => {
     console.log();
-    let high = {
+    let high = [{
         score: 0
-    };
+    }];
     let posts = data.data.posts;
     Object.keys(posts).forEach(pid =>{
         let post = posts[pid];
         if(post.isStickied) return;
-        if(post.score > high.score) high = post;
+        if(post.score > high[0].score) {
+            high.unshift(post);
+        } else {
+            high.push(post);
+        }
     });
-    console.log(high);
+    console.log(high[0].title);
+    console.log(high[1].title);
+    console.log(high[2].title);
     // console.log(Date.parse(high.created));
 });
 // "https://gateway.reddit.com/desktopapi/v1/subreddits/litecoin?rtj=debug&redditWebClient=web2x&app=web2x-client-production&allow_over18=&dist=9&layout=classic&sort=hot"
