@@ -1,0 +1,7 @@
+.idea/*
+node.exe
+livecoin.js
+.git.old/*
+img/Thumbs.db
+node_modules/*
+lib/.idea/*

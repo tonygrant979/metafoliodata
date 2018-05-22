@@ -1,0 +1,12 @@
+{
+  "name": "theseraphprime",
+  "version": "0.0.2",
+  "description": "To the moon!",
+  "dependencies": {
+    "async": "^2.6.0",
+    "bufferutil": "^3.0.3",
+    "discord.js": "^11.2.1",
+    "millify": "^2.0.1",
+    "unirest": "^0.5.1"
+  }
+}
