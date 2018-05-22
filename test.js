@@ -34,7 +34,7 @@ reddit.get('/litecoin?rtj=debug&redditWebClient=web2x&app=web2x-client-productio
 
     function reportTop(x){
         high.splice(0,x).forEach(p=>{
-            console.log(p.score,p.title);
+            console.log(p.score,p.created,p.title);
         })
     }
 
