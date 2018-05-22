@@ -8,5 +8,6 @@ let array = [go,fly,a,kite];
 // console.log(array.toString())
 let out = '';
 console.log();
-eval(`out = [go,fly,a,kite];`)
+let astring = `[go,fly,a,kite];`;
+out = eval(astring);
 console.log(out);
