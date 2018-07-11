@@ -1,5 +1,5 @@
 let coords = {
     tatooine: {
-        'mos eisley': []
+        'mos eisley': [3608,-4753]
     }
 };
