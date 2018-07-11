@@ -7,7 +7,19 @@ let coords = {
 
 function find(planet,coords){
     let planetCoords = coords[planet];
+    let vx = coords[0],
+        vy = coords[1];
     Object.keys(planetCoords).forEach(starport=>{
-        
+        let thisCoords = planetCoords[starport];
+        let thisX = thisCoords[0],
+            thisY = thisCoords[1];
+
+        let a = vx - thisX,
+            b = vy - thisY,
+            thisDist = Math.sqrt(a*a + b*b);
+
+        console.log(thisDist,starport);
     })
 }
+
+find('tatooine',[-1141,-3605]);
