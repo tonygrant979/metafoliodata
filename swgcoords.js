@@ -1,4 +1,4 @@
-let coords = {
+const Planets = {
     tatooine: {
         'mos eisley': [3608,-4753],
         'bestine': [-1294, -3590]
@@ -6,7 +6,7 @@ let coords = {
 };
 
 function find(planet,coords){
-    let planetCoords = coords[planet];
+    let planetCoords = Planets[planet];
     let vx = coords[0],
         vy = coords[1];
     Object.keys(planetCoords).forEach(starport=>{
